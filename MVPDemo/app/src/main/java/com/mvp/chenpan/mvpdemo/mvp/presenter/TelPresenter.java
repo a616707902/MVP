@@ -11,7 +11,7 @@ import java.util.Map;
  * 绑定 view和modle的presenter
  * Created by Administrator on 2016/5/24.
  */
-public class TelPresenter extends BasePresenter{
+public class TelPresenter extends BasePresenter<TelView>{
     //View
     //view与presenter可以相互实现
     TelView telView;
