@@ -21,7 +21,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends MVPBaseActivity<TelView,TelPresenter> implements TelView {
+public class MainActivity extends MVPBaseActivity<TelView, TelPresenter> implements TelView {
 
 
     @Bind(R.id.tel)
@@ -66,6 +66,6 @@ public class MainActivity extends MVPBaseActivity<TelView,TelPresenter> implemen
 
     @Override
     public TelPresenter createPresenter() {
-        return new TelPresenter(this);
+        return new TelPresenter();
     }
 }

@@ -19,7 +19,15 @@ public abstract class MVPBaseActivity<V, T extends BasePresenter<V>> extends App
         //创建presenter
         mPresenter = createPresenter();
         //内存泄漏,当Activity销毁，P，M都还在运行 ，就出现内存泄漏
+        //关联View
+        mPresenter.attachView((V)this);
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //解除关联
+        mPresenter.detachView((V)this);
     }
 
     /**

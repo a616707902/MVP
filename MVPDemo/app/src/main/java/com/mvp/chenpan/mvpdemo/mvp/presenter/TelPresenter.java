@@ -18,23 +18,23 @@ public class TelPresenter extends BasePresenter<TelView>{
     //modle
     TelModle telModle = new TelModelImp();
 
-    public TelPresenter(TelView telView) {
+   /* public TelPresenter(TelView telView) {
         this.telView = telView;
     }
-
+*/
     /**
      * 绑定view与modle
      */
     public void fetch( Map<String, String> map) {
 
-        telView.showLoading();
+        getWeakView().showLoading();
         //modle 获取数据
         if (telModle != null) {
             telModle.queryTel(new TelModle.TelLisener() {
                 @Override
                 public void queryComppelete(String result) {
                     //得到数据，让View显示
-                    telView.showData(result);
+                    getWeakView().showData(result);
                 }
             },   map);
         }
