@@ -1,6 +1,6 @@
 package com.mvp.chenpan.mvpdemo.mvp.presenter;
 
-import com.mvp.chenpan.mvpdemo.base.vbase.BasePresenter;
+import com.mvp.chenpan.mvpdemo.base.pbase.BasePresenter;
 import com.mvp.chenpan.mvpdemo.mvp.modle.TelModle;
 import com.mvp.chenpan.mvpdemo.mvp.modle.imp.TelModelImp;
 import com.mvp.chenpan.mvpdemo.mvp.view.TelView;
@@ -14,7 +14,7 @@ import java.util.Map;
 public class TelPresenter extends BasePresenter<TelView>{
     //View
     //view与presenter可以相互实现
-    TelView telView;
+   // TelView telView;
     //modle
     TelModle telModle = new TelModelImp();
 
