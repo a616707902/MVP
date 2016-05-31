@@ -32,6 +32,8 @@ public class MainActivity extends MVPBaseActivity<TelView, TelPresenter> impleme
 
     @Override
     public void bindViewAndAction() {
+
+
         query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,8 +65,8 @@ public class MainActivity extends MVPBaseActivity<TelView, TelPresenter> impleme
 
 
     @Override
-    public Toolbar getToolBarId() {
-        return toolbar;
+    public int getToolBarId() {
+        return R.id.toolbar;
     }
 
     @Override

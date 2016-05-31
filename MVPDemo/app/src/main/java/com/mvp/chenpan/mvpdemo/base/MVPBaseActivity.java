@@ -52,7 +52,7 @@ public abstract class MVPBaseActivity<V, T extends BasePresenter<V>> extends App
         //内存泄漏,当Activity销毁，P，M都还在运行 ，就出现内存泄漏
         //关联View
         mPresenter.attachView((V) this);
-        mToolbar = getToolBarId();
+        mToolbar = (Toolbar) findViewById(getToolBarId());
         setSupportActionBar(mToolbar);
         bindViewAndAction();
     }
@@ -77,7 +77,7 @@ public abstract class MVPBaseActivity<V, T extends BasePresenter<V>> extends App
      *
      * @return
      */
-    public abstract Toolbar getToolBarId();
+    public abstract int getToolBarId();
 
     @Override
     protected void onDestroy() {
